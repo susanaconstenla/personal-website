@@ -8,18 +8,20 @@ const pageStyle = {
   minHeight: '100vh',
 };
 
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+
 const containerStyle = {
   width: '100%',
   maxWidth: '1280px',
   margin: '0 auto',
-  padding: '8px 40px 72px 40px',
+  padding: isMobile ? '8px 16px 48px 16px' : '8px 40px 72px 40px',
   boxSizing: 'border-box',
   borderLeft: '1px solid #dddddd',
   borderRight: '1px solid #dddddd',
   background: '#ffffff',
 
-  transform: 'scale(0.90)',         
-  transformOrigin: 'top center', 
+  transform: isMobile ? 'none' : 'scale(0.94)',
+  transformOrigin: 'top center',
 };
 
 const sectionStyle = {
