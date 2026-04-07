@@ -643,17 +643,24 @@ React.useEffect(() => {
         alignItems: 'center',
       }}
     >
-    <div
-  style={{
-    fontFamily: 'Georgia, serif',
-    fontSize: '25px',
-    fontWeight: 550,
-    letterSpacing: '3.5px',
-    color: '#111111',
-  }}
->
-  Susana Constenla-Villoslada
-</div>
+    <a
+        href="#"
+        onClick={() => {
+          window.location.hash = '';
+          window.scrollTo(0, 0);
+        }}
+        style={{
+          fontFamily: 'Georgia, serif',
+          fontSize: '25px',
+          fontWeight: 550,
+          letterSpacing: '3.5px',
+          color: '#111111',
+          textDecoration: 'none',
+          cursor: 'pointer',
+        }}
+      >
+        Susana Constenla-Villoslada
+      </a>
 
       <nav style={{ fontSize: '16px', whiteSpace: isMobile ? 'normal' : 'nowrap' }}>
         <a href="#work">Research Projects</a> · <a href="#publications">Publications</a> · <a href="#cv">CV</a> · <a href="#contact">Contact</a>
@@ -716,7 +723,7 @@ React.useEffect(() => {
                       alt="Susana Constenla-Villoslada"
                       style={{
                         width: '100%',
-                        maxWidth: isMobile ? '280px' : '460px',
+                        maxWidth: isMobile ? '280px' : '550px',
                         height: 'auto',
                         objectFit: 'cover',
                         borderRadius: '20px',
