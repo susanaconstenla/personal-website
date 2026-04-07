@@ -254,7 +254,7 @@ function ProjectSubpage({ project }) {
             {project.slug === 'predictability' && (
               <>
                 <img
-                  src="/personal-website/pnas.png"
+                  src={`${import.meta.env.BASE_URL}pnas.png`}
                   style={{
                     width: '120%',
                     maxWidth: '640px',
@@ -272,7 +272,7 @@ function ProjectSubpage({ project }) {
             {project.slug === 'implementation' && (
               <div>
                 <img
-                  src="/personal-website/fieldwork.jpeg"
+                  src={`${import.meta.env.BASE_URL}fieldwork.jpeg`}
                   style={{
                     width: '110%',
                     maxWidth: '500px',
@@ -291,7 +291,7 @@ function ProjectSubpage({ project }) {
                 {/* IMAGE 1 */}
                 <div>
                   <img
-                    src="/personal-website/concept_shift_performance.jpeg"
+                    src={`${import.meta.env.BASE_URL}concept_shift_performance.jpeg`}
                     style={{
                       width: '120%',
                       maxWidth: '520px',
@@ -307,7 +307,7 @@ function ProjectSubpage({ project }) {
                 {/* IMAGE 2 */}
                 <div>
                   <img
-                    src="/personal-website/ci_evol.png"
+                    src={`${import.meta.env.BASE_URL}ci_evol.png`}
                     style={{
                       width: '125%',
                       maxWidth: '520px',
@@ -652,7 +652,7 @@ export default function SusanaWebsite() {
 
                   <div style={{ order: 2, marginTop: '182px' }}>
                     <img
-                      src="/personal-website/profile.jpeg"
+                      src={`${import.meta.env.BASE_URL}profile.jpeg`}
                       alt="Susana Constenla-Villoslada"
                       style={{
                         width: '105%',
