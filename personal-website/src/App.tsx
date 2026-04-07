@@ -168,10 +168,10 @@ function ProjectSubpage({ project }) {
         style={{
           display: 'grid',
           gridTemplateColumns:
-            project.slug === 'predictability' ||
+            (project.slug === 'predictability' ||
             project.slug === 'implementation' ||
-            project.slug === 'continuity'
-              ? '720px 360px'
+            project.slug === 'continuity')
+              ? (isMobile ? '1fr' : '720px 360px')
               : '1fr',
           gap: '48px',
           alignItems: 'start',
@@ -431,7 +431,7 @@ function CVPage() {
 
       <h1
         style={{
-          ffontSize: '42px',
+          fontSize: '42px',
           lineHeight: 1.15,
           letterSpacing: '0.5px',
           fontWeight: 600,
@@ -629,7 +629,8 @@ export default function SusanaWebsite() {
                 <div
                   style={{
                     display: 'grid',
-                    gridTemplateColumns: '720px 380px',
+                    gridTemplateColumns:
+                        window.innerWidth < 768 ? '1fr' : '720px 360px',
                     gap: '50px',
                     alignItems: 'start',
                   }}
