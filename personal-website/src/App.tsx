@@ -10,7 +10,7 @@ const pageStyle = {
 
 const containerStyle = {
   width: '100%',
-  maxWidth: '1100px',
+  maxWidth: '1280px',
   margin: '0 auto',
   padding: '8px 40px 72px 40px',
   boxSizing: 'border-box',
@@ -18,7 +18,7 @@ const containerStyle = {
   borderRight: '1px solid #dddddd',
   background: '#ffffff',
 
-  transform: 'scale(0.94)',         
+  transform: 'scale(0.90)',         
   transformOrigin: 'top center', 
 };
 
