@@ -17,6 +17,9 @@ const containerStyle = {
   borderLeft: '1px solid #dddddd',
   borderRight: '1px solid #dddddd',
   background: '#ffffff',
+
+  transform: 'scale(0.94)',         
+  transformOrigin: 'top center', 
 };
 
 const sectionStyle = {
