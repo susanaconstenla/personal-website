@@ -738,7 +738,7 @@ export default function SusanaWebsite() {
                     href="#predictability"
                   />
 
-                  <PipelineArrow />
+                  {!isMobile && <PipelineArrow />}
 
                   <PipelineCard
                     label=""
@@ -765,7 +765,7 @@ export default function SusanaWebsite() {
                         fontSize: '28px',
                         fontWeight: 600,
                         letterSpacing: '2px',
-                        marginBottom: '18px',
+                        marginBottom: isMobile ? '16px' : '0px',
                         color: '#111111',
                       }}
                     >
