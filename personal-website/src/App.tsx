@@ -2,7 +2,7 @@
 import React from "react";
 
 const pageStyle = {
-  ffontFamily: '"Libre Baskerville", Georgia, serif',
+  fontFamily: '"Libre Baskerville", Georgia, serif',
   background: '#f0f0f0',
   color: '#111111',
   minHeight: '100vh',
@@ -251,22 +251,29 @@ function ProjectSubpage({ project }) {
           >
 
             {/* PREDICTABILITY */}
-            {project.slug === 'predictability' && (
-              <>
-                <img
-                  src={`${import.meta.env.BASE_URL}pnas.png`}
-                  style={{
-                    width: '120%',
-                    maxWidth: '640px',
-                    border: '1px solid #ddd',
-                    borderRadius: '4px',
-                  }}
-                />
-                <p style={{ fontSize: '13px', color: '#666', marginTop: '6px', textAlign: 'right' }}>
-                  First page of Constenla-Villoslada et al., PNAS (2025)
-                </p>
-              </>
-            )}
+                    {project.slug === 'predictability' && (
+            <div>
+              <img
+                src={`${import.meta.env.BASE_URL}pnas.png`}
+                style={{
+                  width: '120%',
+                  maxWidth: '640px',
+                  border: '1px solid #ddd',
+                  borderRadius: '4px',
+                }}
+              />
+              <p
+                style={{
+                  fontSize: '13px',
+                  color: '#666',
+                  marginTop: '6px',
+                  textAlign: 'right',
+                }}
+              >
+                First page of Constenla-Villoslada et al., PNAS (2025)
+              </p>
+            </div>
+          )}
 
             {/* IMPLEMENTATION */}
             {project.slug === 'implementation' && (
