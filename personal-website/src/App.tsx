@@ -568,11 +568,21 @@ export default function SusanaWebsite() {
     };
 
   React.useEffect(() => {
-    const onHashChange = () => setActiveHash(getHash());
-    window.addEventListener('hashchange', onHashChange);
-    onHashChange();
-    return () => window.removeEventListener('hashchange', onHashChange);
-  }, []);
+  const onHashChange = () => {
+    setActiveHash(getHash());
+
+    // 🔥 SCROLL TO TOP
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // or 'smooth' if you want animation
+    });
+  };
+
+  window.addEventListener('hashchange', onHashChange);
+  onHashChange();
+
+  return () => window.removeEventListener('hashchange', onHashChange);
+}, []);
 
   const activeProject = projects.find((p) => p.slug === activeHash);
   const isCV = activeHash === 'cv';
@@ -690,12 +700,20 @@ export default function SusanaWebsite() {
                     </p>
                   </div>
 
-                  <div style={{ order: 2, marginTop: '182px' }}>
+                  <div
+                      style={{
+                        order: isMobile ? 0 : 2,
+                        marginTop: isMobile ? '24px' : '140px',
+                        display: 'flex',
+                        justifyContent: isMobile ? 'center' : 'flex-end',
+                      }}
+                    >
                     <img
                       src={`${import.meta.env.BASE_URL}profile.jpeg`}
                       alt="Susana Constenla-Villoslada"
                       style={{
                         width: '100%',
+                        maxWidth: isMobile ? '280px' : '420px',
                         height: 'auto',
                         objectFit: 'cover',
                         borderRadius: '20px',
@@ -738,7 +756,7 @@ export default function SusanaWebsite() {
                     href="#predictability"
                   />
 
-                  {!isMobile && <PipelineArrow isMobile={isMobile} />}
+                  {!isMobile && <PipelineArrow />}
 
                   <PipelineCard
                     label=""
@@ -747,7 +765,7 @@ export default function SusanaWebsite() {
                     href="#implementation"
                   />
 
-                  {!isMobile && <PipelineArrow isMobile={isMobile} />}
+                  {!isMobile && <PipelineArrow />}
 
                   <PipelineCard
                     label=""
