@@ -286,7 +286,7 @@ function ProjectSubpage({ project, isMobile }) {
                   src={`${import.meta.env.BASE_URL}fieldwork.jpeg`}
                   style={{
                     width: '110%',
-                    maxWidth: '500px',
+                    maxWidth: '640px',
                     borderRadius: '3px',
                   }}
                 />
@@ -305,7 +305,7 @@ function ProjectSubpage({ project, isMobile }) {
                     src={`${import.meta.env.BASE_URL}concept_shift_performance.jpeg`}
                     style={{
                       width: '100%',
-                      maxWidth: '520px',
+                      maxWidth: '640px',
                       borderRadius: '4px',
                       border: '1px solid #ddd',
                     }}
