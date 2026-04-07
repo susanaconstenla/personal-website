@@ -247,7 +247,7 @@ function ProjectSubpage({ project, isMobile }) {
               justifySelf: 'end',
               alignSelf: 'start',
               marginTop: '40px',
-              transform: 'translateX(10px)',
+              transform: isMobile ? 'none' : 'translateX(10px)',
               display: 'flex',
               flexDirection: 'column',
               gap: project.slug === 'continuity' ? '350px' : '0px',
@@ -260,7 +260,7 @@ function ProjectSubpage({ project, isMobile }) {
               <img
                 src={`${import.meta.env.BASE_URL}pnas.png`}
                 style={{
-                  width: '120%',
+                  width: '100%',
                   maxWidth: '640px',
                   border: '1px solid #ddd',
                   borderRadius: '4px',
@@ -304,7 +304,7 @@ function ProjectSubpage({ project, isMobile }) {
                   <img
                     src={`${import.meta.env.BASE_URL}concept_shift_performance.jpeg`}
                     style={{
-                      width: '120%',
+                      width: '100%',
                       maxWidth: '520px',
                       borderRadius: '4px',
                       border: '1px solid #ddd',
@@ -320,7 +320,7 @@ function ProjectSubpage({ project, isMobile }) {
                   <img
                     src={`${import.meta.env.BASE_URL}ci_evol.png`}
                     style={{
-                      width: '125%',
+                      width: '100%',
                       maxWidth: '520px',
                       borderRadius: '4px',
                       border: '1px solid #ddd',
@@ -642,7 +642,7 @@ export default function SusanaWebsite() {
   Susana Constenla-Villoslada
 </div>
 
-      <nav style={{ fontSize: '16px', whiteSpace: 'nowrap' }}>
+      <nav style={{ fontSize: '16px', whiteSpace: isMobile ? 'normal' : 'nowrap' }}>
         <a href="#work">Research Projects</a> · <a href="#publications">Publications</a> · <a href="#cv">CV</a> · <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -695,7 +695,7 @@ export default function SusanaWebsite() {
                       src={`${import.meta.env.BASE_URL}profile.jpeg`}
                       alt="Susana Constenla-Villoslada"
                       style={{
-                        width: '105%',
+                        width: '100%',
                         height: 'auto',
                         objectFit: 'cover',
                         borderRadius: '20px',
