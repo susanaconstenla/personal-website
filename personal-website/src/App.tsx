@@ -463,12 +463,12 @@ function CVPage() {
   );
 }
 
-function PipelineArrow({ isMobile }) {
+function PipelineArrow() {
   return (
     <div
       style={{
-        display: isMobile ? 'block' : 'flex',
-        gap: isMobile ? '24px' : '18px',
+        display: 'flex',
+        alignItems: 'center',
         justifyContent: 'center',
         fontSize: '22px',
         color: '#c2b280',
@@ -728,7 +728,6 @@ export default function SusanaWebsite() {
                     display: isMobile ? 'block' : 'flex',
                     gap: isMobile ? '24px' : '18px',
                     alignItems: 'stretch',
-                    gap: '18px',
                     marginTop: '24px',
                   }}
                 >
@@ -748,7 +747,7 @@ export default function SusanaWebsite() {
                     href="#implementation"
                   />
 
-                  <PipelineArrow isMobile={isMobile} />
+                  {!isMobile && <PipelineArrow isMobile={isMobile} />}
 
                   <PipelineCard
                     label=""
