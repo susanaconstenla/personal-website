@@ -244,7 +244,7 @@ function ProjectSubpage({ project, isMobile }) {
                   onClick={() => setActiveImage(`${import.meta.env.BASE_URL}fieldwork.jpeg`)}
                   style={{
                     width: '100%',
-                    maxWidth: '640px',
+                    maxWidth: '600px',
                     borderRadius: '3px',
                     cursor: 'zoom-in',
                   }}
