@@ -832,7 +832,7 @@ React.useEffect(() => {
                       Caveat utilitor: A comparative assessment of resilience measurement approaches
                     </a>
                     <br />
-                    Upton, J., Constenla-Villoslada, S., Barrett, C.B., et al. (2022). <em>Journal of Development Economics</em>.
+                    Upton, J., Constenla-Villoslada, S., Barrett, C.B. (2022). <em>Journal of Development Economics</em>.
                   </p>
                   <p style={{ color: '#444', lineHeight: 1.7, margin: 0 }}>
                     As resilience measurement becomes central to development policy, multiple approaches have emerged. This paper compares three widely used resilience measurement frameworks using panel data from Ethiopia and Niger, showing that they produce substantially different classifications and exhibit only modest predictive performance.
