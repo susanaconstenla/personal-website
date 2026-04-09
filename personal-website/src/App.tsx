@@ -42,7 +42,7 @@ const projects = [
     slug: 'predictability',
     title: 'Machine learning–based predictability of socioeconomic indicators',
     summary:
-      'Studies machine learning–based predictability of socioeconomic indicators, combining insights on the role of dynamic covariates and the temporal representativeness of training data. It leverages large-scale secondary data sources such as satellite imagery.',
+      'Studies machine learning–based predictability of socioeconomic indicators, combining insights on the role of dynamic covariates and the temporal representativeness of training data. Leverages large-scale secondary data sources such as satellite imagery.',
 
     body: [
       "This project studies the machine learning–based predictability of child malnutrition in shock-prone, data-constrained settings, with a focus on how dynamic covariates, the temporal representativeness of training data, and measurement constraints jointly shape predictive performance.",
@@ -173,7 +173,7 @@ function ProjectSubpage({ project, isMobile }) {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: isMobile ? '1fr' : '720px 360px',
+            gridTemplateColumns: isMobile ? '1fr' : '2fr 1.2fr',
             gap: '48px',
             alignItems: 'start',
             maxWidth: '1100px',
@@ -214,7 +214,7 @@ function ProjectSubpage({ project, isMobile }) {
               justifySelf: 'end',
               alignSelf: 'start',
               marginTop: '40px',
-              transform: isMobile ? 'none' : 'translateX(10px)',
+              transform: isMobile ? 'none' : 'translateX(50px)',
               display: 'flex',
               flexDirection: 'column',
               gap: project.slug === 'continuity' ? '60px' : '0px',
@@ -240,8 +240,16 @@ function ProjectSubpage({ project, isMobile }) {
               </div>
             )}
 
-            {/* IMPLEMENTATION */}
-            {project.slug === 'implementation' && (
+          {/* IMPLEMENTATION */}
+          {project.slug === 'implementation' && (
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                gap: '150px',   
+              }}
+            >
+              {/* IMAGE 1 */}
               <div>
                 <img
                   src={`${import.meta.env.BASE_URL}fieldwork.jpeg`}
@@ -257,7 +265,25 @@ function ProjectSubpage({ project, isMobile }) {
                   Fieldwork in Kajiado county, Kenya: visit to NDMA high-frequency anthropometric data collection supporting early warning systems.
                 </p>
               </div>
-            )}
+
+              {/* IMAGE 2 */}
+              <div>
+                <img
+                  src={`${import.meta.env.BASE_URL}google.jpeg`}   
+                  onClick={() => setActiveImage(`${import.meta.env.BASE_URL}google.jpeg`)}
+                  style={{
+                    width: '100%',
+                    maxWidth: '850px',
+                    borderRadius: '3px',
+                    cursor: 'zoom-in',
+                  }}
+                />
+                <p style={{ fontSize: '13px', color: '#666', marginTop: '6px', textAlign: 'right' }}>
+                  Presenting the project at Google.org under the "AI collaborative for Food Security".
+                </p>
+              </div>
+            </div>
+          )}
 
             {/* CONTINUITY */}
             {project.slug === 'continuity' && (
@@ -617,9 +643,19 @@ React.useEffect(() => {
         Susana Constenla-Villoslada
       </a>
 
-      <nav style={{ fontSize: '16px', whiteSpace: isMobile ? 'normal' : 'nowrap' }}>
-        <a href="#work">Research Projects</a> · <a href="#publications">Publications</a> · <a href="#cv">CV</a> · <a href="#contact">Contact</a>
-      </nav>
+              <nav
+          style={{
+            fontSize: '16px',
+            display: 'flex',
+            gap: isMobile ? '12px' : '24px',  // 👈 spacing control
+            flexWrap: isMobile ? 'wrap' : 'nowrap',
+          }}
+        >
+          <a href="#work">Research Projects</a>
+          <a href="#publications">Publications</a>
+          <a href="#cv">CV</a>
+          <a href="#contact">Contact</a>
+        </nav>
     </div>
           {isCV ? (
             <CVPage />
@@ -632,7 +668,7 @@ React.useEffect(() => {
                   style={{
                     display: 'grid',
                     gridTemplateColumns:
-                        isMobile ? '1fr' : '720px 360px',
+                        isMobile ? '1fr' : '680px 480px',
                     gap: '50px',
                     alignItems: 'start',
                   }}
@@ -657,18 +693,22 @@ React.useEffect(() => {
                     </p>
 
                     <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', margin: 0 }}>
-                      I study how these systems can be implemented and assessed using experimental and quasi-experimental causal inference methods, and how their performance can be sustained over time and across contexts under distribution shift.
+                    I study how these systems can be implemented and assessed using experimental and quasi-experimental causal inference methods, and how their performance can be sustained over time and across contexts under distribution shift. 
                     </p>
 
                     <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', marginTop: '18px' }}>
-                      I hold an M.S. in Applied Economics from Cornell University (Fulbright Scholar), and, prior to my PhD, I spent three years as a research analyst at IFPRI&apos;s headquarters in Washington, D.C., where I worked mainly on sample design for population-based surveys and on the design and implementation of impact evaluations for large World Bank development interventions.
+                    A defining feature of my research approach is close engagement with local stakeholders and institutional partners in the co-development of these systems, integrating operational knowledge and iterative feedback into their design and deployment. This emphasis on partnership enables effective technology transfer, ensuring that partner institutions are able to adopt, adapt, and ultimately own these tools within their own decision-making processes.
+                    </p>
+
+                    <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', marginTop: '18px' }}>
+                      I hold an M.S. in Applied Economics from Cornell University (Fulbright Scholar), and, prior to my PhD, I spent three years as a research analyst at IFPRI&apos;s headquarters in Washington, D.C., where I specialized in sample design for population-based surveys and design and implementation of impact evaluations for large World Bank development interventions.
                     </p>
                   </div>
 
                   <div
                       style={{
                         order: isMobile ? 0 : 2,
-                        marginTop: isMobile ? '24px' : '140px',
+                        marginTop: isMobile ? '24px' : '180px',
                         display: 'flex',
                         justifyContent: isMobile ? 'center' : 'flex-end',
                       }}
@@ -678,7 +718,7 @@ React.useEffect(() => {
                       alt="Susana Constenla-Villoslada"
                       style={{
                         width: '100%',
-                        maxWidth: isMobile ? '280px' : '750px',
+                        maxWidth: isMobile ? '260px' : '440px',
                         height: 'auto',
                         objectFit: 'cover',
                         borderRadius: '20px',
