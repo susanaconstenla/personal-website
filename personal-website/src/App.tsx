@@ -91,7 +91,7 @@ const projects = [
 ],
   publications: [
   {
-    title: 'Working paper: Machine learning forecast-based triggers for anticipatory action on child wasting',
+    title: 'Working paper: Machine learning forecast-based triggers for anticipatory action on child wasting: an impact evaluation in arid Kenya',
     link: '#',
   },
   {
