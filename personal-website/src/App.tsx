@@ -688,9 +688,15 @@ React.useEffect(() => {
                       in data-scarce settings
                     </h1>
 
-                    <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', margin: '0 0 16px 0' }}>
-                      I am a PhD candidate at UC Berkeley School of Information, working at the intersection of economics and machine learning for international development. My research focuses on machine learning–based predictability of socioeconomic indicators for social protection and humanitarian response, as well as the deployment and evaluation of predictive systems based on these methodological advances in policy environments.
-                    </p>
+                   <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', margin: '0 0 16px 0' }}>
+  I am an Assistant Research Professor at the Center for Data Science for
+  Enterprise and Society at Cornell University, working at the intersection
+  of economics and machine learning for international development. My
+  research focuses on machine learning–based predictability of socioeconomic
+  indicators for social protection and humanitarian response, as well as the
+  deployment and evaluation of predictive systems based on these
+  methodological advances in policy environments.
+</p>
 
                     <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', margin: 0 }}>
                     I study how these systems can be implemented and assessed using experimental and quasi-experimental causal inference methods, and how their performance can be sustained over time and across contexts under distribution shift. 
@@ -701,8 +707,13 @@ React.useEffect(() => {
                     </p>
 
                     <p style={{ fontSize: '18px', lineHeight: 1.7, color: '#333333', marginTop: '18px' }}>
-                      I hold an M.S. in Applied Economics from Cornell University (Fulbright Scholar), and, prior to my PhD, I spent three years as a research analyst at IFPRI&apos;s headquarters in Washington, D.C., where I specialized in sample design for population-based surveys and design and implementation of impact evaluations for large World Bank development interventions.
-                    </p>
+  I hold a Ph.D. from the UC Berkeley School of Information and an M.S. in
+  Applied Economics from Cornell University (Fulbright Scholar). Prior to my
+  Ph.D., I spent three years as a research analyst at IFPRI&apos;s headquarters
+  in Washington, D.C., where I specialized in sample design for
+  population-based surveys and the design and implementation of impact
+  evaluations for large World Bank development interventions.
+</p>
                   </div>
 
                   <div
